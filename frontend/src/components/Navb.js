@@ -5,6 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navb = () => {
+  const handleLogout = () => {
+		localStorage.removeItem("token");
+		window.location.reload();
+	};
   return (
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" >
@@ -20,7 +24,7 @@ const Navb = () => {
               <Nav.Link href="/chat">Chat</Nav.Link>
               <Nav.Link href="/timeline">Timeline</Nav.Link>
               <Nav.Link href="/admin">Admin</Nav.Link>
-              <Nav.Link href="/logout">Logout</Nav.Link>
+              <Nav.Link href="/" onClick={handleLogout}>Logout</Nav.Link>
               
             
             </Nav>
