@@ -1,8 +1,7 @@
 import React from "react";
 import "./Body.css";
 import image from "./Scarecrow.png";
-// import Header from "./components/Header";
-// import Footer from "./components/Footer";
+
 
 const Body = () => {
   return (
@@ -24,8 +23,7 @@ const Body = () => {
     </section>
     <footer>
     <p className="attribution">
-      <a href="https://github.com/brayanbarroso/">Brayan Barroso</a> @
-      <a href="https://devchallenges.io">DevChallenges.io</a>
+      Made with &#10084; by <a href="https://github.com/vorachaitya/HackNiche_MightyDevs">MightyDevs</a> 
     </p>
   </footer>
     </>

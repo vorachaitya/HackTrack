@@ -15,7 +15,7 @@ import Body from './components/404notFound/Body';
 function App() {
   return (
     <>
-    <Body/>
+    
       <Notifications />
       <Notify/>
     <BrowserRouter>
@@ -27,6 +27,7 @@ function App() {
                 
           <Route path="/login" exact element={<Login />} /> */}
           {/* <Route exact path='/video' element={<Video />} /> */}
+          <Route exact path='*' element={<Body/>} />
 
         </Routes>
   
