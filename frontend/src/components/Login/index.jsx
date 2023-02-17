@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
+import './login.css'
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
@@ -30,46 +31,68 @@ const Login = () => {
 	};
 
 	return (
-		<div className={styles.login_container} style={{backgroundImage: "url('https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80')" }}>
-
-			<div className={styles.login_form_container}>
-				<div className={styles.left}>
-					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Login to Pehchan</h1>
-						<input
-							type="email"
-							placeholder="Email"
-							name="email"
-							onChange={handleChange}
-							value={data.email}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="password"
-							placeholder="Password"
-							name="password"
-							onChange={handleChange}
-							value={data.password}
-							required
-							className={styles.input}
-						/>
+		<>
+			<div class="card" id="card">
+				<div class="front">
+					<p class="login_word">LOG IN</p>
+					<img src="https://drive.google.com/uc?export=view&id=1K5_tAX_taOQQ0wwmFx3P--V05kjvg4cu" alt="person picture" />
+					<form onSubmit={handleSubmit}>
+						<input type="email" name="email" placeholder="Email" class="f1" onChange={handleChange} value={data.email} required />
 						{error && <div className={styles.error_msg}>{error}</div>}
-						<button type="submit" className={styles.green_btn}>
-							Sign In
-						</button>
+						<input type="password" name="password" placeholder="Password" class="f1" onChange={handleChange} value={data.password} required />
+						<button class="f1" type="submit">Log in</button>
+
 					</form>
-				</div>
-				<div className={styles.right}>
-					<h1>New Here ?</h1>
-					<Link to="/signup">
-						<button type="button" className={styles.white_btn}>
+					<p>New Here? <Link to="/signup">
+						
 							Sign Up
-						</button>
+						
 					</Link>
+					</p>
 				</div>
+
 			</div>
-		</div>
+		</>
+		// <div className={styles.login_container} >
+
+		// 	<div className={styles.login_form_container}>
+		// 		<div className={styles.left}>
+		// 			<form className={styles.form_container} onSubmit={handleSubmit}>
+		// 				<h1>Login to Pehchan</h1>
+		// 				<input
+		// 					type="email"
+		// 					placeholder="Email"
+		// 					name="email"
+		// 					onChange={handleChange}
+		// 					value={data.email}
+		// 					required
+		// 					className={styles.input}
+		// 				/>
+		// 				<input
+		// 					type="password"
+		// 					placeholder="Password"
+		// 					name="password"
+		// 					onChange={handleChange}
+		// 					value={data.password}
+		// 					required
+		// 					className={styles.input}
+		// 				/>
+		// 				{error && <div className={styles.error_msg}>{error}</div>}
+		// 				<button type="submit" className={styles.green_btn}>
+		// 					Sign In
+		// 				</button>
+		// 			</form>
+		// 		</div>
+		// 		<div className={styles.right}>
+		// 			<h1>New Here ?</h1>
+		// 			<Link to="/signup">
+		// 				<button type="button" className={styles.white_btn}>
+		// 					Sign Up
+		// 				</button>
+		// 			</Link>
+		// 		</div>
+		// 	</div>
+		// </div>
 	);
 };
 
