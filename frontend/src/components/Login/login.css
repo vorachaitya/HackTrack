@@ -3,15 +3,11 @@
     padding: 0px;
     margin:  0px;
 }
-body
-{
-    background-color:#FFB30E;/*#a5b3e4*/
-    perspective: 1500px;
-}
+
 .card
 {
-    width: 380px;
-    height: 510px;
+    width: 21rem;
+    height: 19rem;
     position: relative;
     margin: 50px auto;
     border-radius: 10px;
@@ -49,6 +45,7 @@ body
 .card .front form button
 {
     background-color:rgba(53, 53, 231, 0.854);
+  
     padding: 12px 60px 12px 60px; 
     margin-top:30px;
     cursor: pointer;

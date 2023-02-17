@@ -7,7 +7,7 @@ import './login.css'
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
 	const [error, setError] = useState("");
-
+	
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
 	};
@@ -29,6 +29,8 @@ const Login = () => {
 			}
 		}
 	};
+	console.log(data.email);
+	localStorage.setItem('name', JSON.stringify(data.email));
 
 	return (
 		<>
@@ -38,6 +40,7 @@ const Login = () => {
 					<img src="https://drive.google.com/uc?export=view&id=1K5_tAX_taOQQ0wwmFx3P--V05kjvg4cu" alt="person picture" />
 					<form onSubmit={handleSubmit}>
 						<input type="email" name="email" placeholder="Email" class="f1" onChange={handleChange} value={data.email} required />
+						
 						{error && <div className={styles.error_msg}>{error}</div>}
 						<input type="password" name="password" placeholder="Password" class="f1" onChange={handleChange} value={data.password} required />
 						<button class="f1" type="submit">Log in</button>

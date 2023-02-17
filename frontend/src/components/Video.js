@@ -8,7 +8,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard"
 import Peer from "simple-peer"
 import io from "socket.io-client"
 import "../App.css"
-import Timeline from "./Timeline"
+
 
 
 const socket = io.connect('http://localhost:5000')
@@ -97,19 +97,19 @@ function Video() {
 	return (
 		<>
 		{/* <Timeline/> */}
-			<h1 style={{ textAlign: "center", color: '#fff' }}>Zoomish</h1>
-		<div className="container">
-			<div className="video-container">
-				<div className="video">
-					{stream &&  <video playsInline muted ref={myVideo} autoPlay style={{ width: "300px" }} />}
+			<div>
+		<div className="container" style={{display:'flex',flexDirection:'row',textAlign:'center'}}>
+			<div className="video-container" style={{margin:'auto',marginTop:'9rem'}}>
+				<div className="video" >
+					{stream &&  <video playsInline muted ref={myVideo} autoPlay style={{ width: "350px" }} />}
 				</div>
 				<div className="video">
 					{callAccepted && !callEnded ?
-					<video playsInline ref={userVideo} autoPlay style={{ width: "300px"}} />:
+					<video playsInline ref={userVideo} autoPlay style={{ width: "350px"}} />:
 					null}
 				</div>
 			</div>
-			<div className="myId">
+			<div className="myId" style={{marginTop:'6rem'}}>
 				<TextField
 					id="filled-basic"
 					label="Name"
@@ -154,6 +154,7 @@ function Video() {
 					</div>
 				) : null}
 			</div>
+		</div>
 		</div>
 		</>
 	)

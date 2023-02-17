@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import styles from "./styles.module.css";
 
 const Signup = () => {
 	const [data, setData] = useState({
@@ -36,61 +35,92 @@ const Signup = () => {
 	};
 
 	return (
-		<div className={styles.signup_container} style={{backgroundImage: "url('https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80')" }}>		
-			<div className={styles.signup_form_container}>
-				<div className={styles.left}>
-					<h1>Welcome Back</h1>
-					<Link to="/login">
-						<button type="button" className={styles.white_btn}>
-							Sign in
-						</button>
-					</Link>
+		// <div className={styles.signup_container} style={{backgroundImage: "url('https://images.unsplash.com/photo-1461360228754-6e81c478b882?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80')" }}>		
+		// 	<div className={styles.signup_form_container}>
+		// 		<div className={styles.left}>
+		// 			<h1>Welcome Back</h1>
+		// 			<Link to="/login">
+		// 				<button type="button" className={styles.white_btn}>
+		// 					Sign in
+		// 				</button>
+		// 			</Link>
+		// 		</div>
+		// 		<div className={styles.right}>
+		// 			<form className={styles.form_container} onSubmit={handleSubmit}>
+		// 				<h1>Create Account</h1>
+		// 				<input
+		// 					type="text"
+		// 					placeholder="First Name"
+		// 					name="firstName"
+		// 					onChange={handleChange}
+		// 					value={data.firstName}
+		// 					required
+		// 					className={styles.input}
+		// 				/>
+		// 				<input
+		// 					type="text"
+		// 					placeholder="Last Name"
+		// 					name="lastName"
+		// 					onChange={handleChange}
+		// 					value={data.lastName}
+		// 					required
+		// 					className={styles.input}
+		// 				/>
+		// 				<input
+		// 					type="email"
+		// 					placeholder="Email"
+		// 					name="email"
+		// 					onChange={handleChange}
+		// 					value={data.email}
+		// 					required
+		// 					className={styles.input}
+		// 				/>
+		// 				<input
+		// 					type="password"
+		// 					placeholder="Password"
+		// 					name="password"
+		// 					onChange={handleChange}
+		// 					value={data.password}
+		// 					required
+		// 					className={styles.input}
+		// 				/>
+		// 				{error && <div className={styles.error_msg}>{error}</div>}
+		// 				<button type="submit" className={styles.green_btn}>
+		// 					Sign Up
+		// 				</button>
+		// 			</form>
+		// 		</div>
+		// 	</div>
+		// </div>
+
+		<div class="signup-form">
+			<div class="container">
+				<div class="header">
+					<h1>Create an Account</h1>
+					<p>Get started for free!</p>
 				</div>
-				<div className={styles.right}>
-					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Create Account</h1>
-						<input
-							type="text"
-							placeholder="First Name"
-							name="firstName"
-							onChange={handleChange}
-							value={data.firstName}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="text"
-							placeholder="Last Name"
-							name="lastName"
-							onChange={handleChange}
-							value={data.lastName}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="email"
-							placeholder="Email"
-							name="email"
-							onChange={handleChange}
-							value={data.email}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="password"
-							placeholder="Password"
-							name="password"
-							onChange={handleChange}
-							value={data.password}
-							required
-							className={styles.input}
-						/>
-						{error && <div className={styles.error_msg}>{error}</div>}
-						<button type="submit" className={styles.green_btn}>
-							Sign Up
-						</button>
-					</form>
-				</div>
+				<form>
+					<div class="input">
+						<i class="fa-solid fa-user"></i>
+						<input type="text" placeholder="Username" />
+					</div>
+					<div class="input">
+						<i class="fa-solid fa-envelope"></i>
+						<input type="email" placeholder="Email" />
+					</div>
+					<div class="input">
+						<i class="fa-solid fa-lock"></i>
+						<input type="password" placeholder="Password" />
+					</div>
+					<input class="signup-btn" type="submit" value="SIGN UP" />
+				</form>
+				{/* <p>Or sign up with</p>
+				<div class="social-icons">
+					<i class="fa-brands fa-facebook-f"></i>
+					<i class="fa-brands fa-twitter"></i>
+					<i class="fa-brands fa-google"></i>
+				</div> */}
+				<p>Already have an account <a href="#">sign in</a></p>
 			</div>
 		</div>
 	);

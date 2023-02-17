@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./css/timeline.css"
+import axios from "axios";
+
 
 const Timeline = () => {
     const [listItems, setListItems] = useState([]);
@@ -38,8 +39,8 @@ const Timeline = () => {
 
 
 
-<h2 className='headtitle'>Timeline</h2>
-            <div class="rightbox">
+            <h2 className='headtitle' style={{textAlign:'center',paddingTop:'2rem'}}>Timeline</h2>
+            {/* <div class="rightbox">
                 <div class="rb-container">
                     <ul class="rb">
                         {
@@ -57,10 +58,30 @@ const Timeline = () => {
                         }
 
 
-
-
                     </ul>
 
+                </div>
+            </div> */}
+            <div id="timeline-container">
+                <div class="inner-container">
+                    {/* <h2 class="heading">Schedule</h2> */}
+                    <ul class="timeline">
+                    {
+                            listItems.map(item => (
+                                <li class="timeline-item" data-date={item.item.substring(0,11)}>
+                                   
+                                        {
+                                            <>
+                                               {item.item.substring(11)}
+                                            </>
+                                        }
+                                    
+                                </li>
+                            ))
+                        }
+                       
+                        
+                    </ul>
                 </div>
             </div>
 

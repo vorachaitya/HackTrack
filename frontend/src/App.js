@@ -1,11 +1,12 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home';
-import Navb from './components/Navb';
-import styles from "./index.css"
-import { Notifications } from 'react-push-notification';
-import Notify from './components/Notify';
+// import Navb from './components/Navb';
+// import styles from "./index.css"
+// import { Notifications } from 'react-push-notification';
+import Navi from './components/Navi';
+// import Notify from './components/Notify';
 import Body from './components/404notFound/Body';
 import Admin from './components/Admin';
 import Timeline from './components/Timeline';
@@ -20,12 +21,11 @@ function App() {
   return (
     <>
     
-      <Notifications />
-      <Notify/>
+      {/* <Notifications />
+      <Notify/> */}
     <BrowserRouter>
      
-
-        <Navb />
+      <Navi/>
         <Routes>
 
           {user && <Route path="/" exact element={<Home />} />}
