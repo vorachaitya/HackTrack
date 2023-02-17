@@ -17,9 +17,10 @@ const Navb = () => {
             <Nav>
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/video">Video Conferencing</Nav.Link>
-              <Nav.Link href="#memes">Chat</Nav.Link>
+              <Nav.Link href="/chat">Chat</Nav.Link>
               <Nav.Link href="/timeline">Timeline</Nav.Link>
               <Nav.Link href="/admin">Admin</Nav.Link>
+              <Nav.Link href="/logout">Logout</Nav.Link>
               
             
             </Nav>
