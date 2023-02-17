@@ -1,6 +1,6 @@
 import React from "react";
-import "./css/Body.css";
-import image from "./img/Scarecrow.png";
+import "./Body.css";
+import image from "./Scarecrow.png";
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";
 
