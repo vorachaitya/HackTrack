@@ -21,11 +21,9 @@ function App() {
   return (
     <>
     
-      {/* <Notifications />
-      <Notify/> */}
+ 
     <BrowserRouter>
-     
-      {/* <Navi/> */}
+   
         <Routes>
 
           {user && <Route path="/" exact element={<Home />} />}
@@ -36,8 +34,9 @@ function App() {
           <Route exact path='/chat' element={<Chat />} />
           <Route exact path='/video' element={<Video />} />
           <Route exact path='/admin' element={<Admin />} />
-          <Route path="/" element={<Navigate replace to="/login" />} />
           <Route exact path='*' element={<Body/>} />
+          <Route path="/" element={<Navigate replace to="/login" />} />
+          
 
 
 

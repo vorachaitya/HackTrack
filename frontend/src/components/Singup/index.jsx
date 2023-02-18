@@ -93,59 +93,61 @@ const Signup = () => {
 		// 		</div>
 		// 	</div>
 		// </div>
+		<>
+			<h1 style={{ textAlign: 'center', padding: '1rem', color: '#5052ea' }}>HackTrack</h1>
+			<div class="signup-form">
+				<div class="container">
+					<div class="header">
+						<h1>Create an Account</h1>
+						<p>Get started for free!</p>
+					</div>
+					<form onSubmit={handleSubmit}>
+						<div class="input">
+							<i class="fa-solid fa-user"></i>
+							<input type="text"
+								placeholder="First Name"
+								name="firstName"
+								onChange={handleChange}
+								value={data.firstName}
+								required />
+						</div>
+						<div class="input">
+							<i class="fa-solid fa-envelope"></i>
+							<input type="text"
+								placeholder="Last Name"
+								name="lastName"
+								onChange={handleChange}
+								value={data.lastName}
+								required />
+						</div>
+						<div class="input">
+							<i class="fa-solid fa-envelope"></i>
+							<input type="email"
+								placeholder="Email"
+								name="email"
+								onChange={handleChange}
+								value={data.email}
+								required />
+						</div>
+						<div class="input">
+							<i class="fa-solid fa-lock"></i>
+							<input type="password"
+								placeholder="Password"
+								name="password"
+								onChange={handleChange}
+								value={data.password}
+								required />
+						</div>
+						{error && <div>{error}</div>}
+						<button type="submit" class="signup-btn" value="SIGN UP">
+							Sign Up
+						</button>
+					</form>
 
-		<div class="signup-form">
-			<div class="container">
-				<div class="header">
-					<h1>Create an Account</h1>
-					<p>Get started for free!</p>
+					<p>Already have an account <a href="/login">sign in</a></p>
 				</div>
-				<form onSubmit={handleSubmit}>
-					<div class="input">
-						<i class="fa-solid fa-user"></i>
-						<input type="text"
-							placeholder="First Name"
-							name="firstName"
-							onChange={handleChange}
-							value={data.firstName}
-							required />
-					</div>
-					<div class="input">
-						<i class="fa-solid fa-envelope"></i>
-						<input type="text"
-							placeholder="Last Name"
-							name="lastName"
-							onChange={handleChange}
-							value={data.lastName}
-							required />
-					</div>
-					<div class="input">
-						<i class="fa-solid fa-envelope"></i>
-						<input type="email"
-							placeholder="Email"
-							name="email"
-							onChange={handleChange}
-							value={data.email}
-							required />
-					</div>
-					<div class="input">
-						<i class="fa-solid fa-lock"></i>
-						<input type="password"
-							placeholder="Password"
-							name="password"
-							onChange={handleChange}
-							value={data.password}
-							required />
-					</div>
-					{error && <div>{error}</div>}
-					<button type="submit" class="signup-btn" value="SIGN UP">
-						Sign Up
-					</button>
-				</form>
-
-				<p>Already have an account <a href="/login">sign in</a></p>
 			</div>
-		</div>
+		</>
 	);
 };
 

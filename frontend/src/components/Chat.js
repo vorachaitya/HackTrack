@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import io from 'socket.io-client'
+import Navi from "./Navi";
 
 const socket = io('http://localhost:7001')
 // const userName = 'User '+parseInt(Math.random()*10)
@@ -29,6 +30,7 @@ function Chat() {
   };
   return (
     <>
+    <Navi/>
     <h2 style={{textAlign:'center',padding:'1rem'}}>Chat App</h2>
     <div style={{display:'flex'}}>
     <div className="App" style={{margin:'auto',marginTop:'2rem', marginLeft:'2rem',height:'100%'}}>

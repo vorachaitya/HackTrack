@@ -9,7 +9,7 @@ import Peer from "simple-peer"
 import io from "socket.io-client"
 import "../App.css"
 
-
+import Navi from "./Navi"
 
 const socket = io.connect('http://localhost:5000')
 function Video() {
@@ -96,6 +96,7 @@ function Video() {
 
 	return (
 		<>
+		<Navi/>
 		{/* <Timeline/> */}
 			<div>
 		<div className="container" style={{display:'flex',flexDirection:'row',textAlign:'center'}}>

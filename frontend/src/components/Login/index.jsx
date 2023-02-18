@@ -3,11 +3,11 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import './login.css'
-
+import Footer from "../Footer";
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
 	const [error, setError] = useState("");
-	
+
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
 	};
@@ -34,27 +34,70 @@ const Login = () => {
 
 	return (
 		<>
+			<h1 style={{textAlign:'center',paddingTop:'1rem',color:'#5052ea'}}>HackTrack</h1>
 			<div class="card" id="card">
+
 				<div class="front">
 					<p class="login_word">LOG IN</p>
-					<img src="https://drive.google.com/uc?export=view&id=1K5_tAX_taOQQ0wwmFx3P--V05kjvg4cu" alt="person picture" />
+					{/* <img src="https://drive.google.com/uc?export=view&id=1K5_tAX_taOQQ0wwmFx3P--V05kjvg4cu" alt="person picture" /> */}
 					<form onSubmit={handleSubmit}>
 						<input type="email" name="email" placeholder="Email" class="f1" onChange={handleChange} value={data.email} required />
-						
+
 						{error && <div className={styles.error_msg}>{error}</div>}
 						<input type="password" name="password" placeholder="Password" class="f1" onChange={handleChange} value={data.password} required />
 						<button class="f1" type="submit">Log in</button>
 
 					</form>
 					<p>New Here? <Link to="/signup">
-						
-							Sign Up
-						
+
+						Sign Up
+
 					</Link>
 					</p>
 				</div>
 
+
+
 			</div>
+			{/* <main class="main">
+				<div class="container">
+					<section class="wrapper">
+						<div class="heading">
+							<h1 class="text text-large">Sign In</h1>
+							<p class="text text-normal">New user? <span><a href="#" class="text text-links">Create an account</a></span>
+							</p>
+						</div>
+						<form onSubmit={handleSubmit}>
+							<div class="input-control">
+								<label for="email" class="input-label" hidden>Email Address</label>
+								<input type="email"
+									placeholder="Email"
+									name="email"
+									onChange={handleChange}
+									value={data.email}
+									required />
+							</div>
+							<div class="input-control">
+								<label for="password" class="input-label" hidden>Password</label>
+								<input type="password"
+									placeholder="Password"
+									name="password"
+									onChange={handleChange}
+									value={data.password}
+									required />
+							</div>
+							<div class="input-control">
+								
+								<button type="submit">
+									Sign In
+								</button>
+							</div>
+						</form>
+
+					</section>
+				</div>
+			</main> */}
+			<Footer />
 		</>
 		// <div className={styles.login_container} >
 
@@ -96,6 +139,7 @@ const Login = () => {
 		// 		</div>
 		// 	</div>
 		// </div>
+
 	);
 };
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./css/timeline.css"
 import axios from "axios";
-
+import Navi from "./Navi";
 
 const Timeline = () => {
     const [listItems, setListItems] = useState([]);
@@ -19,6 +19,7 @@ const Timeline = () => {
     }, []);
     return (
         <>
+        <Navi/>
             {/* <div className="todo-listItems">
                 {
                     listItems.map(item => (

@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import Navi from './Navi';
 
 
 function Admin() {
@@ -58,7 +59,7 @@ function Admin() {
 
   return (
     <>
-  
+  <Navi/>
     <div className="App">
       <h1>Add Event</h1>
       <form className="form" onSubmit={e => addItem(e)}>
