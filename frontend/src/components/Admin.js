@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
+import "./css/admin.css"
 import Navi from './Navi';
 
 
@@ -8,6 +9,17 @@ function Admin() {
   const [listItems, setListItems] = useState([]);
   const [isUpdating, setIsUpdating] = useState('');
   const [updateItemText, setUpdateItemText] = useState('');
+  const [enteredPassword,setEnteredPassword]=useState('');
+  const [istrue,setIstrue]=useState(false);
+  const password="123321";
+
+  function matchPassword(){
+    if(password.localeCompare(enteredPassword)==0){
+      setEnteredPassword(true);
+      setIstrue(true);
+    }
+  }
+
 
   //add new todo item to database
   const addItem = async (e) => {
@@ -57,16 +69,36 @@ function Admin() {
     </form>
   )
 
+  useEffect(()=>{},[enteredPassword]);
+
   return (
     <>
   <Navi/>
     <div className="App">
-      <h1>Add Event</h1>
-      <form className="form" onSubmit={e => addItem(e)}>
-        <input type="text" placeholder='Add Event' onChange={e => {setItemText(e.target.value)} } value={itemText} />
-        <button type="submit">Add</button>
-      </form>
+      <h2 className='message'>To Update Timeline</h2>
       
+      {!istrue &&
+      <>
+      <div>
+      <input type="password" className="enterpassword" placeholder='Enter admin password' onChange={e => {setEnteredPassword(e.target.value)} } />
+      <button type="submit" className="btnenterpassword" onClick={matchPassword}>Enter</button>
+      </div>
+      </>}
+
+      {istrue &&
+      <>
+      <div>
+
+      <form className="form" onSubmit={e => addItem(e)}>
+        <input type="text" className="enterpassword" placeholder='Add Event' onChange={e => {setItemText(e.target.value)} } value={itemText} />
+        <button type="submit" className="btnenterpassword">Add</button>
+      </form>
+      </div>
+      </>}
+      
+      
+      {/* <div>Sorry! You entered the wrong password</div> */}
+
     </div>
     </>
   );

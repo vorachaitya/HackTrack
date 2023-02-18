@@ -1,0 +1,36 @@
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h2{
+    font-family: 'Padauk', sans-serif;
+    text-align: center;
+    font-size: 2.3rem;
+    opacity: 0.5;
+    margin-top: 2rem;
+}
+
+.enterpassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin-top: 4rem;
+}
+
+.btnenterpassword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1.2rem; 
+    margin-top: 2rem;
+    height: 1.7rem;
+    background-color: rgb(204, 204, 213);
+    border-radius: 2rem;
+}
