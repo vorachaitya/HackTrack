@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-form {
+  width: 480px;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 2px 4px 8px #6b728040;
+  text-align: center;
+  margin: auto;
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.header h1 {
+  font-weight: bolder;
+  font-size: 28px;
+  color: #6366f1;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  padding: 8px 40px;
+  border-radius: 4px;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-size: 16px;
+}
+
+.input input::placeholder {
+  color: #6b7280;
+}
+
+.input i {
+  top: 50%;
+  width: 36px;
+  position: absolute;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.signup-btn {
+  width: 100%;
+  border: none;
+  padding: 8px 0;
+  margin: 24px 0;
+  border-radius: 4px;
+  background-color: #6366f1;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-btn:active {
+  background-color: #4f46e5;
+  transition: all 0.3s ease;
+}
+
+.social-icons i {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  border-radius: 50%;
+  margin: 24px 8px 48px 8px;
+  background-color: gray;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+i.fa-facebook-f {
+  background-color: #3b5998;
+}
+
+i.fa-twitter {
+  background-color: #1da1f2;
+}
+
+i.fa-google {
+  background-color: #dd4b39;
+}
+
+a {
+  color: #6366f1;
+  text-decoration: none;
+}

@@ -41,7 +41,7 @@ function Chat() {
         onChange={(e)=>{setMessage(e.target.value)}}
         required
         ></input>
-        <button className='submit' type='submit'style={{padding:'2px'}}>Send</button>
+          <button className='submit' type='submit'style={{padding:'2px',background:'transparent',border:'none'}}>Send</button>
       </form>
       
       {chat.map((payload, index)=>{

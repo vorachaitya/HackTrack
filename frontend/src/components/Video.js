@@ -1,8 +1,8 @@
-import Button from "@material-ui/core/Button"
-import IconButton from "@material-ui/core/IconButton"
-import TextField from "@material-ui/core/TextField"
-import AssignmentIcon from "@material-ui/icons/Assignment"
-import PhoneIcon from "@material-ui/icons/Phone"
+// import Button from "@material-ui/core/Button"
+// import IconButton from "@material-ui/core/IconButton"
+// import TextField from "@material-ui/core/TextField"
+// import AssignmentIcon from "@material-ui/icons/Assignment"
+// import PhoneIcon from "@material-ui/icons/Phone"
 import React, { useEffect, useRef, useState } from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import Peer from "simple-peer"
@@ -110,7 +110,8 @@ function Video() {
 				</div>
 			</div>
 			<div className="myId" style={{marginTop:'6rem'}}>
-				<TextField
+				<input
+					placeholder="username"
 					id="filled-basic"
 					label="Name"
 					variant="filled"
@@ -118,28 +119,29 @@ function Video() {
 					onChange={(e) => setName(e.target.value)}
 					style={{ marginBottom: "20px" }}
 				/>
-				<CopyToClipboard text={me} style={{ marginBottom: "2rem" }}>
-					<Button variant="contained" color="primary" startIcon={<AssignmentIcon fontSize="large" />}>
+				<CopyToClipboard text={me} style={{ marginBottom: "2rem",background:'#84aae4' }}>
+					<button variant="contained" color="primary">
 						Copy ID
-					</Button>
+					</button>
 				</CopyToClipboard>
 
-				<TextField
+				<input
 					id="filled-basic"
 					label="ID to call"
 					variant="filled"
+					placeholder="meetcode"
 					value={idToCall}
 					onChange={(e) => setIdToCall(e.target.value)}
 				/>
 				<div className="call-button">
 					{callAccepted && !callEnded ? (
-						<Button variant="contained" color="secondary" onClick={leaveCall}>
+						<button variant="contained" color="secondary" onClick={leaveCall}>
 							End Call
-						</Button>
+						</button>
 					) : (
-						<IconButton color="primary" aria-label="call" onClick={() => callUser(idToCall)}>
-							<PhoneIcon fontSize="large" />
-						</IconButton>
+						<button color="primary" aria-label="call" onClick={() => callUser(idToCall)} style={{background:'green',border:'none',padding:'3px'}}>
+							Connect Call
+						</button>
 					)}
 					{idToCall}
 				</div>
@@ -148,9 +150,9 @@ function Video() {
 				{receivingCall && !callAccepted ? (
 						<div className="caller">
 						<h1 >{name} is calling...</h1>
-						<Button variant="contained" color="primary" onClick={answerCall}>
+						<button variant="contained" color="primary" onClick={answerCall}>
 							Answer
-						</Button>
+						</button>
 					</div>
 				) : null}
 			</div>

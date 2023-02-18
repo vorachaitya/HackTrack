@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './signup.css'
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -99,28 +100,50 @@ const Signup = () => {
 					<h1>Create an Account</h1>
 					<p>Get started for free!</p>
 				</div>
-				<form>
+				<form onSubmit={handleSubmit}>
 					<div class="input">
 						<i class="fa-solid fa-user"></i>
-						<input type="text" placeholder="Username" />
+						<input type="text"
+							placeholder="First Name"
+							name="firstName"
+							onChange={handleChange}
+							value={data.firstName}
+							required />
 					</div>
 					<div class="input">
 						<i class="fa-solid fa-envelope"></i>
-						<input type="email" placeholder="Email" />
+						<input type="text"
+							placeholder="Last Name"
+							name="lastName"
+							onChange={handleChange}
+							value={data.lastName}
+							required />
+					</div>
+					<div class="input">
+						<i class="fa-solid fa-envelope"></i>
+						<input type="email"
+							placeholder="Email"
+							name="email"
+							onChange={handleChange}
+							value={data.email}
+							required />
 					</div>
 					<div class="input">
 						<i class="fa-solid fa-lock"></i>
-						<input type="password" placeholder="Password" />
+						<input type="password"
+							placeholder="Password"
+							name="password"
+							onChange={handleChange}
+							value={data.password}
+							required />
 					</div>
-					<input class="signup-btn" type="submit" value="SIGN UP" />
+					{error && <div>{error}</div>}
+					<button type="submit" class="signup-btn" value="SIGN UP">
+						Sign Up
+					</button>
 				</form>
-				{/* <p>Or sign up with</p>
-				<div class="social-icons">
-					<i class="fa-brands fa-facebook-f"></i>
-					<i class="fa-brands fa-twitter"></i>
-					<i class="fa-brands fa-google"></i>
-				</div> */}
-				<p>Already have an account <a href="#">sign in</a></p>
+
+				<p>Already have an account <a href="/login">sign in</a></p>
 			</div>
 		</div>
 	);
