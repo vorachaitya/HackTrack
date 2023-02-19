@@ -31,14 +31,7 @@ To develop innovative solutions that streamline the process of shortlisting team
 
 ### 🤖 Tech-Stack
 
-<a href="https://reactjs.org/" title="React"><img src="https://github.com/get-icon/geticon/raw/master/icons/react.svg" alt="" width="45px" height="45px"></a>
-<img src="https://user-images.githubusercontent.com/90527884/219831208-aa7c6858-7d09-42b6-95bf-edf510d993c8.png" width="70px" height="60px">
-<img src="https://user-images.githubusercontent.com/90527884/219831590-d2a46dc0-f0b1-44aa-9636-ac56824b1751.png" width="70px" height="60px">
-<img src="https://user-images.githubusercontent.com/90527884/219831755-6e289787-a60f-416d-8603-9a5009aea6bb.png" width="70px" height="60px">
-<img src="https://user-images.githubusercontent.com/90527884/219831924-cf98279d-0e34-4b7c-8eb9-77a96dfacf47.png" width="70px" height="60px">
-<img src="https://user-images.githubusercontent.com/90527884/219832089-bebb97d6-d6fc-4896-93e9-7f6685f09d4a.png" width="70px" height="60px">
-<img src="https://user-images.githubusercontent.com/90527884/219832241-22975dc9-eac2-4176-a655-d7cdc931413b.png" width="70px" height="60px">
-<img src="https://user-images.githubusercontent.com/90527884/219832697-79d0e836-bc89-4091-8061-76720e1b3a7f.png" width="70px" height="60px">
+<img src="https://user-images.githubusercontent.com/90527884/219973181-9fe26670-d42c-4c98-8b1b-0756b94fb9fa.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219831208-aa7c6858-7d09-42b6-95bf-edf510d993c8.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219831590-d2a46dc0-f0b1-44aa-9636-ac56824b1751.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219831755-6e289787-a60f-416d-8603-9a5009aea6bb.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219831924-cf98279d-0e34-4b7c-8eb9-77a96dfacf47.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219832089-bebb97d6-d6fc-4896-93e9-7f6685f09d4a.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219832241-22975dc9-eac2-4176-a655-d7cdc931413b.png" width="70px" height="60px"><img src="https://user-images.githubusercontent.com/90527884/219832697-79d0e836-bc89-4091-8061-76720e1b3a7f.png" width="70px" height="60px">
 
 ### Future Scope and Business Potential
 - Instead of using word-based embedding,we can use sentence-embedding to get proper context.
