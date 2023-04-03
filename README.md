@@ -1,4 +1,4 @@
-## HackNiche2023 at DJ Sanghavi College
+## Finalists HackNiche2023 at DJ Sanghavi College
 
 - <a href="https://drive.google.com/file/d/1iwQggnBCmA-JYZHykApN1dEF8PyTK-A_/view?usp=sharing" title="Demo Video Link">Demo Video Link</a>
 ### Problem Statement
